@@ -1,0 +1,15 @@
+.imgStyle {
+  border-radius: 50%;
+  height: 12rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  border: 2px rgb(62, 83, 201) dotted;
+  width: 80%;
+}
+
+.navLi{
+  margin-top: 3rem;
+}
+.navUl{
+  max-height:100vh;
+}

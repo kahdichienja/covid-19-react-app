@@ -1,0 +1,37 @@
+{
+  "name": "your-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
+    "classnames": "^2.2.6",
+    "mdbreact": "4.9.0",
+    "react": "^16.13.1",
+    "react-chartjs-2": "^2.9.0",
+    "react-countup": "^4.3.3",
+    "react-dom": "^16.13.1",
+    "react-google-maps": "^9.4.5",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "rename": "renamer --find App-clear.js --replace App.js ./src/App-clear.js",
+    "remove-demo": "rimraf ./src/font ./src/img ./src/pages ./src/Routes.js ./src/App.js && npm run rename",
+    "deploy": "npm run build && firebase deploy"
+  },
+  "devDependencies": {
+    "renamer": "^1.1.4",
+    "rimraf": "^2.7.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
