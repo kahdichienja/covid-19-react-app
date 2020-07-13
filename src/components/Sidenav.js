@@ -25,7 +25,7 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <MDBNavbar color="white darken-5" className="black-text" dark expand="md">
+      <MDBNavbar color="white darken-5" className="black-text" dark expand="md" style={{width:'100%'}}>
         <MDBNavbarBrand>
           <strong className="black-text">App</strong>
         </MDBNavbarBrand>

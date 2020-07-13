@@ -86,10 +86,10 @@ class AgendaApp extends Component {
     const { events, modal, notification } = this.state;
     return (
       <React.Fragment>
-        <MDBContainer className="mt-5">
+        <div className="mt-5 p-5">
           <Notification notification={notification} />
           <MDBRow>
-            <MDBCol md="8" className="card mb-r mr-2 mb-2">
+            <MDBCol md="8">
               <h2 className="text-uppercase my-3">Today:</h2>
               <div id="schedule-items">
                 {events.map((event) => (
@@ -112,7 +112,7 @@ class AgendaApp extends Component {
                 </MDBCol>
               </MDBRow>
             </MDBCol>
-            <MDBCol md="3" className="card p-3">
+            <MDBCol md="4">
               <h3 className="text-uppercase my-3">Check Today's Weather</h3>
               <h6 className="my-3">
                  You have{" "}
@@ -121,7 +121,7 @@ class AgendaApp extends Component {
               <Weather />
             </MDBCol>
           </MDBRow>
-        </MDBContainer>
+        </div>
         {/* Modal code below: */}
         <MDBModal isOpen={modal} toggle={this.toggleModal}>
           <MDBModalHeader

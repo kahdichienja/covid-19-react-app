@@ -15,7 +15,6 @@ const CountryPicker = ({ handleCountryChange }) => {
   return (
     <div>
       <select className="browser-default custom-select mt-4 mb-4" defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
-        <option value="">Select A Country</option>
         <option value="">Global</option>
         {fetchedCountries.map((country, i) => <option key={i} value={country}>{country}</option>)}
         

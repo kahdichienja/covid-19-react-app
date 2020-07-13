@@ -12,7 +12,7 @@ const LoadingSpinner = () => {
         </>
     )
 }
-const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
+const Cards =  ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     // console.log(props);
     if (!confirmed) {
          

@@ -8,7 +8,15 @@ import { fetchData } from "./Api/index";
 
 import covid19Img from "../../img/covid.jpg";
 
-import { MDBRow, MDBContainer } from "mdbreact";
+import {
+  MDBRow,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCol,
+} from "mdbreact";
 
 class Covid extends Component {
   state = {
@@ -28,27 +36,38 @@ class Covid extends Component {
   render() {
     const { data, country } = this.state;
     return (
-      <MDBContainer>
-        <div>
-          <MDBRow className="mt-2">
-            <img
-              src={covid19Img}
-              style={{ height: "25vh", justifyContent: "center", width: '78vw'  }}
-              className={styles.image}
-              alt="covid 19 pendamic"
-            />
+      <div>
+        <MDBContainer>
+          <MDBRow>
+            <MDBCard className="mt-3">
+              <MDBCardImage
+                className="img-fluid"
+                style={{ width: "100%", height: "30vh" }}
+                src={covid19Img}
+                waves
+              />
+              <MDBCardBody>
+                <MDBRow className="mt-2">
+                  <Cards data={data} />
+                </MDBRow>
+              </MDBCardBody>
+            </MDBCard>
           </MDBRow>
-          <MDBRow className="mt-2">
-            <Cards data={data} />
+          <MDBRow>
+
+          <MDBCol md="12" xl="12" xs="12" style={{width:'82vw'}}>
+            <MDBCard className="mt-3">
+              <MDBCardTitle className="p-2">
+                <CountryPicker handleCountryChange={this.handleCountryChange} />
+              </MDBCardTitle>
+              <MDBCardBody>
+                   <Chart style={{width:'100%'}} country={country} data={data} />
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
           </MDBRow>
-
-          <CountryPicker handleCountryChange={this.handleCountryChange} />
-
-          <div className="card p-3">
-            <Chart country={country} data={data} />
-          </div>
-        </div>
-      </MDBContainer>
+        </MDBContainer>
+      </div>
     );
   }
 }
